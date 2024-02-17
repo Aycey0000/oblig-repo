@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('ticketForm');
-    const ticketList = document.getElementById('ticketList');
-    const deleteAllButton = document.getElementById('deleteAll');
+    let form = document.getElementById('ticketForm');
+    let ticketList = document.getElementById('ticketList');
+    let deleteAllButton = document.getElementById('deleteAll');
 
-    const tickets = [];
+    let tickets = [];
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
         // Retrieve form values
-        const film = document.getElementById('film').value;
-        const numberOfTickets = document.getElementById('tickets').value;
-        const firstname = document.getElementById('firstname').value;
-        const surname = document.getElementById('surname').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
+        let film = document.getElementById('film').value;
+        let numberOfTickets = document.getElementById('tickets').value;
+        let firstname = document.getElementById('firstname').value;
+        let surname = document.getElementById('surname').value;
+        let email = document.getElementById('email').value;
+        let phone = document.getElementById('phone').value;
 
         // Perform input validation
         if (!numberOfTickets.trim() || isNaN(numberOfTickets) || numberOfTickets < 1 || numberOfTickets > 10) {
